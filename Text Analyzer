@@ -1,0 +1,28 @@
+public class Main {
+    public static void main(String[] args) {
+        String message = "I am trying to learn Java from scratch, and I am reinforcing my learning process with small projects.";
+        System.out.println(message);
+
+        System.out.println("Character count(including blanks):" + message.length());
+        System.out.println("4th element(including blanks):" + message.charAt(3)); //Starts from zero, 0 1 2 3 4
+        System.out.println("7th letter:" + message.charAt(8));
+        System.out.println(message.concat(" I hope I can improve myself in the field of coding."));
+        String newMessage = message.concat(" I hope I can improve myself in the field of coding.");
+        int numbers = 10;
+        char[] characters = new char[numbers];
+        message.getChars(0, numbers, characters, 0);
+        System.out.println("The first '" + numbers + "' characters -including blanks- are: " + new String(characters));
+        char letter = 'z';
+
+        int firstIndex = newMessage.indexOf(letter);
+        if (firstIndex == -1) {
+            System.out.println("The letter '" + letter + "' does not exist in the text.");
+        } else {
+            System.out.println("At which position does the letter'" + letter + "' first appear in the text?=" + message.indexOf(letter));
+            System.out.println("At which position does the letter'" + letter + "' last appear in the text?=" + message.lastIndexOf(letter));
+        }
+        String[] words = newMessage.split(" ");
+        int wordCount = words.length;
+        System.out.println("Number of words: " + wordCount);
+    }
+}
