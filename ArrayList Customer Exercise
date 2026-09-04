@@ -1,0 +1,17 @@
+import java.util.ArrayList;
+
+public class Main {
+    public static void main(String[] args) {
+        ArrayList<Customer> customers = new ArrayList<Customer>();
+
+        Customer irem = new Customer(1, "İrem", "Özata", 19);
+        customers.add(irem);
+        customers.add(new Customer(2, "Rem", "Zata", 25));
+        customers.add(new Customer(3, "İre", "Özat", 16));
+        customers.remove(irem);
+        for (Customer customer : customers) {
+            System.out.println(customer.id);
+            System.out.println(customer.lastName);
+        }
+    }
+}
